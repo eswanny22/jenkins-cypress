@@ -16,6 +16,7 @@ pipeline {
     //   }
 
       steps {
+        sh 'npm install --cache=".CustomCache"'
         sh 'npm ci'
         sh "npm run cypress:run"
       }
